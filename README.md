@@ -192,11 +192,6 @@ Contributions are welcome! Please:
 3. Add tests for new features
 4. Submit a pull request
 
-## License
-
-MIT License - See LICENSE file for details
-
-
 ## Updates
 
 This portfolio is actively maintained. Check back for:
