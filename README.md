@@ -2,7 +2,7 @@
 
 A comprehensive, production-ready toolkit for Google Ads and marketing analytics automation. Includes real-time dashboards, advanced SQL analytics, Python automation scripts, and budget management tools.
 
-## 📊 Project Overview
+## Project Overview
 
 This portfolio contains:
 
@@ -11,7 +11,7 @@ This portfolio contains:
 - **Python Automation**: Scripts for bid optimization, budget monitoring, and daily performance adjustments
 - **Complete Documentation**: Setup guides, API references, and troubleshooting
 
-## 🎯 Key Features
+## Key Features
 
 ### 1. Real-Time Budget Pacing Dashboard
 - Daily spend tracking vs. allocated budgets
@@ -39,7 +39,7 @@ This portfolio contains:
 - Configuration management
 - Error handling and logging
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.9+
@@ -47,31 +47,9 @@ This portfolio contains:
 - Google Cloud Project with BigQuery enabled
 - OAuth 2.0 credentials
 
-### Installation
 
-1. Clone the repository:
-```bash
-git clone https://github.com/VimeshikaShri/adtech-portfolio.git
-cd adtech-portfolio
-```
 
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-3. Set up credentials:
-```bash
-cp config.example.yaml config.yaml
-# Edit config.yaml with your credentials
-```
-
-4. Run initial setup:
-```bash
-python scripts/setup.py
-```
-
-## 📁 Project Structure
+## Project Structure
 
 ```
 adtech-portfolio/
@@ -108,36 +86,7 @@ adtech-portfolio/
 └── LICENSE
 ```
 
-## 🔧 Configuration
-
-Edit `config.yaml` with your credentials:
-
-```yaml
-google_ads:
-  developer_token: "YOUR_DEVELOPER_TOKEN"
-  client_id: "YOUR_CLIENT_ID"
-  client_secret: "YOUR_CLIENT_SECRET"
-  refresh_token: "YOUR_REFRESH_TOKEN"
-  customer_id: "1234567890"
-
-bigquery:
-  project_id: "gbt-datawarehouse-prod"
-  dataset_id: "marketing_analytics"
-  location: "US"
-
-bidding_strategy:
-  daily_budget_usd: 15000
-  roas_target: 3.5
-  cpa_target: 12.50
-  min_bid_micros: 100000
-  max_bid_micros: 5000000
-
-slack:
-  webhook_url: "https://hooks.slack.com/services/YOUR/WEBHOOK/URL"
-  alert_channel: "#marketing-alerts"
-```
-
-## 📊 Dashboards
+## Dashboards
 
 ### Budget Pacing Dashboard
 Real-time monitoring of daily spend vs. budget allocation:
@@ -162,7 +111,7 @@ Multi-touch attribution analysis:
 - Top-performing touchpoints
 - Channel performance comparison
 
-## 🐍 Python Scripts
+## Python Scripts
 
 ### Automated Bidding Strategy
 Runs daily to optimize bids based on ROAS targets:
@@ -227,7 +176,7 @@ FROM daily_metrics
 GROUP BY month
 ```
 
-## 🔐 Security
+## Security
 
 - Store credentials in `config.yaml` (never commit to git)
 - Use OAuth 2.0 refresh tokens for authentication
@@ -242,7 +191,7 @@ GROUP BY month
 - [API Reference](docs/API_REFERENCE.md)
 - [Troubleshooting](docs/TROUBLESHOOTING.md)
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please:
 1. Fork the repository
@@ -250,18 +199,12 @@ Contributions are welcome! Please:
 3. Add tests for new features
 4. Submit a pull request
 
-## 📄 License
+## License
 
 MIT License - See LICENSE file for details
 
-## 🆘 Support
 
-For issues, questions, or suggestions:
-- Open an issue on GitHub
-- Check the Troubleshooting guide
-- Review API documentation
-
-## 🔄 Updates
+## Updates
 
 This portfolio is actively maintained. Check back for:
 - New dashboard templates
@@ -269,12 +212,6 @@ This portfolio is actively maintained. Check back for:
 - Enhanced bidding strategies
 - Integration with new platforms
 
-## ⭐ Credits
+## Credits
 
 Built for marketers and advertisers who need powerful analytics and automation without the enterprise price tag.
-
----
-
-**Last Updated**: January 2025
-**Python Version**: 3.9+
-**Status**: Production Ready
