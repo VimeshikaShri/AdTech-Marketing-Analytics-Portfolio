@@ -1,0 +1,106 @@
+# Google Ads API Configuration
+google_ads:
+  developer_token: "INSERT_YOUR_DEVELOPER_TOKEN"
+  client_id: "INSERT_YOUR_CLIENT_ID.apps.googleusercontent.com"
+  client_secret: "INSERT_YOUR_CLIENT_SECRET"
+  refresh_token: "INSERT_YOUR_REFRESH_TOKEN"
+  customer_id: "1234567890"  # Your Google Ads customer ID
+
+# BigQuery Configuration
+bigquery:
+  project_id: "gbt-datawarehouse-prod"
+  dataset_id: "marketing_analytics"
+  location: "US"
+  credentials_path: "path/to/service-account.json"  # Optional: if using service account
+
+# Bidding Strategy Configuration
+bidding_strategy:
+  # Daily budget allocation
+  daily_budget_usd: 15000.00
+  
+  # Performance targets
+  roas_target: 3.5
+  cpa_target: 12.50
+  min_roas_threshold: 1.5
+  
+  # Bid adjustment parameters
+  min_bid_micros: 100000  # $0.10
+  max_bid_micros: 5000000  # $5.00
+  daily_bid_adjustment_percent: 5  # +/- 5% per day
+  
+  # Campaign pausing rules
+  pause_below_roas: 1.0
+  pause_below_conversions_weekly: 3
+  
+  # Budget reallocation
+  reallocate_enabled: true
+  reallocate_from_low_performers: true
+  low_performer_roas_threshold: 2.0
+
+# Budget Monitoring Configuration
+budget_monitor:
+  check_interval_minutes: 60  # Run every hour
+  alert_overspend_percent: 110  # Alert if spending 110% of daily budget
+  alert_underspend_percent: 50  # Alert if spending only 50% of daily budget
+  
+  # Campaign-level monitoring
+  campaign_level_monitoring: true
+  
+# Slack Integration
+slack:
+  enabled: true
+  webhook_url: "https://hooks.slack.com/services/YOUR/WEBHOOK/URL"
+  alert_channel: "#marketing-alerts"
+  report_channel: "#marketing-reports"
+  daily_report_time: "08:00"  # 8 AM UTC
+  
+# Logging Configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  log_file: "logs/adtech.log"
+  max_log_size_mb: 10
+  backup_count: 5
+
+# Email Notifications (Optional)
+email:
+  enabled: false
+  smtp_server: "smtp.gmail.com"
+  smtp_port: 587
+  from_email: "your-email@gmail.com"
+  to_emails:
+    - "recipient@example.com"
+  password_env_var: "EMAIL_PASSWORD"
+
+# Database Configuration (Optional: for storing historical data)
+database:
+  enabled: false
+  type: "postgresql"  # postgres or mysql
+  host: "localhost"
+  port: 5432
+  database: "adtech"
+  user: "adtech_user"
+  password_env_var: "DB_PASSWORD"
+
+# API Rate Limiting
+rate_limit:
+  google_ads_qpm: 60000  # Queries per minute
+  bigquery_concurrent_queries: 10
+  api_retry_attempts: 3
+  api_retry_delay_seconds: 5
+
+# Data Retention
+data_retention:
+  keep_daily_reports_days: 90
+  keep_detailed_logs_days: 30
+  keep_archived_campaigns_days: 180
+
+# Dry Run Mode (Testing without making changes)
+dry_run: false
+
+# Feature Flags
+features:
+  automated_bidding: true
+  budget_reallocation: true
+  daily_optimization: true
+  slack_notifications: true
+  historical_trending: true
