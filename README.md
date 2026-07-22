@@ -184,13 +184,6 @@ GROUP BY month
 - Use `.gitignore` to exclude sensitive files
 - Implement rate limiting for API calls
 
-## 📝 Documentation
-
-- [Installation Guide](docs/INSTALLATION.md)
-- [Usage Documentation](docs/USAGE.md)
-- [API Reference](docs/API_REFERENCE.md)
-- [Troubleshooting](docs/TROUBLESHOOTING.md)
-
 ## Contributing
 
 Contributions are welcome! Please:
